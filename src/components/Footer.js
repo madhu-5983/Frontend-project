@@ -5,48 +5,59 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="container footer-container">
+                {/* Column 1 — Brand */}
                 <div className="footer-brand">
-                    <h3>SSP Software Solutions</h3>
+                    <h3>SSP Institute</h3>
                     <p>
-                        Perseverance Software Training Institute
-                        <br />
-                        Empowering the next generation of IT Professionals.
+                        Gain industry-relevant skills through a wide range of programs designed for real-world careers. Explore Cloud, DevOps, AI, Full Stack, and much more—built to make you confident, capable, and job-ready.
                     </p>
                 </div>
 
-                <div className="footer-links">
-                    <h4>Explore</h4>
+                {/* Column 2 — Programs */}
+                <div className="footer-col">
+                    <h4>Programs</h4>
                     <ul>
-                        <li><a href="/#">Home</a></li>
-                        <li><a href="/#featured-courses-section">Courses</a></li>
-                        <li><a href="/#about-section">About Us</a></li>
-                        <li><a href="/register">Register</a></li>
+                        <li><a href="/#featured-courses-section">Cloud &amp; DevOps</a></li>
+                        <li><a href="/#featured-courses-section">Cloud Computing</a></li>
+                        <li><a href="/#featured-courses-section">Full Stack Development</a></li>
+                        <li><a href="/#featured-courses-section">Artificial Intelligence (AI)</a></li>
+                        <li><a href="/#featured-courses-section">And Much More</a></li>
                     </ul>
                 </div>
 
-                <div className="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>Phone: 7075505229 / 7075506229</p>
-                    <p>Email: <a href="mailto:persevcareers@gmail.com">persevcareers@gmail.com</a></p>
+                {/* Column 3 — Company */}
+                <div className="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/#featured-courses-section">Trainings</a></li>
+                        <li><a href="/#featured-courses-section">Internships</a></li>
+                        <li><a href="/#featured-courses-section">Placements</a></li>
+                        <li><a href="/#featured-courses-section">Crash Courses</a></li>
+                    </ul>
                 </div>
 
-                <div className="footer-social">
-                    <h4>Follow Us</h4>
-                    <div className="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=61550316355738" target="_blank" rel="noreferrer" className="social-icon">
-                            FB
-                        </a>
-                        <a href="https://www.instagram.com/perseverance_institute/" target="_blank" rel="noreferrer" className="social-icon">
-                            IG
-                        </a>
-                        <a href="https://www.youtube.com/@persevcareers6577" target="_blank" rel="noreferrer" className="social-icon">
-                            YT
-                        </a>
-                    </div>
+                {/* Column 4 — Get in Touch */}
+                <div className="footer-col footer-contact-col">
+                    <h4>Get in Touch</h4>
+                    <ul className="contact-list">
+                        <li>
+                            <span className="contact-icon">📍</span>
+                            <span>Annamaiah Circle, Beside DMART, Caratlane Building, AIR Bypass Road, Tirupati, Andhra Pradesh</span>
+                        </li>
+                        <li>
+                            <span className="contact-icon">📞</span>
+                            <a href="tel:+919035011859">+91-9035011859</a>
+                        </li>
+                        <li>
+                            <span className="contact-icon">✉️</span>
+                            <a href="mailto:persevcareers@gmail.com">persevcareers@gmail.com</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+
             <div className="footer-bottom text-center">
-                <p>&copy; {new Date().getFullYear()} SSP Group - House of Software Excellence. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} SSP Global. All rights reserved.</p>
             </div>
         </footer>
     );

@@ -1,0 +1,114 @@
+.reviews-section {
+    background: #f8fafc;
+}
+
+.reviews-section .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.reviews-section .section-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xl);
+}
+
+.reviews-section .highlight {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Horizontal scrolling row */
+.reviews-track {
+    display: flex;
+    gap: var(--spacing-lg);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-md);
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.reviews-track::-webkit-scrollbar {
+    height: 6px;
+}
+
+.reviews-track::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 3px;
+}
+
+.reviews-track::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 3px;
+}
+
+/* Review Card */
+.review-card {
+    min-width: 280px;
+    max-width: 300px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.review-top {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.review-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.review-name {
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+}
+
+.review-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    font-size: 0.9rem;
+    color: #d1d5db;
+}
+
+.star.filled {
+    color: #f59e0b;
+}
+
+.review-text {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .reviews-section .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .review-card {
+        min-width: 240px;
+    }
+}

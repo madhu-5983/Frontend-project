@@ -30,30 +30,34 @@ const AddCourseForm = () => {
     };
 
     return (
-        <div className="add-course-form glass-card">
-            <h2>Add New Course</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label>Title</label>
-                    <input type="text" name="title" value={formData.title} onChange={handleChange} required />
+        <section className="section-padding bg-light">
+            <div className="container">
+                <div className="add-course-form card">
+                    <h2>Add New Course</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <label>Course Title</label>
+                            <input type="text" name="title" value={formData.title} onChange={handleChange} required />
+                        </div>
+                        <div className="form-group">
+                            <label>Duration</label>
+                            <input type="text" name="duration" value={formData.duration} onChange={handleChange} required />
+                        </div>
+                        <div className="form-group">
+                            <label>Start Date</label>
+                            <input type="date" name="start_date" value={formData.start_date} onChange={handleChange} required />
+                        </div>
+                        <div className="form-group">
+                            <label>Fee ($)</label>
+                            <input type="number" name="fee" value={formData.fee} onChange={handleChange} required />
+                        </div>
+                        <button type="submit" className="btn-primary" disabled={status.loading}> {status.loading ? "Adding..." : "Add Course"} </button>
+                        {status.success && <p className="success-msg">Course added successfully!</p>}
+                        {status.error && <p className="error-msg">{status.error}</p>}
+                    </form>
                 </div>
-                <div className="form-group">
-                    <label>Duration</label>
-                    <input type="text" name="duration" value={formData.duration} onChange={handleChange} required />
-                </div>
-                <div className="form-group">
-                    <label>Start Date</label>
-                    <input type="date" name="start_date" value={formData.start_date} onChange={handleChange} required />
-                </div>
-                <div className="form-group">
-                    <label>Fee</label>
-                    <input type="number" name="fee" value={formData.fee} onChange={handleChange} required />
-                </div>
-                <button type="submit" disabled={status.loading}> {status.loading ? "Adding..." : "Add Course"} </button>
-                {status.success && <p className="success-msg">Course added successfully!</p>}
-                {status.error && <p className="error-msg">{status.error}</p>}
-            </form>
-        </div>
+            </div>
+        </section>
     );
 };
 

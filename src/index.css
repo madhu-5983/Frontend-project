@@ -1,21 +1,20 @@
 :root {
   /* Colors */
-  --bg-primary: #0f172a; /* Deep slate */
-  --bg-secondary: #1e293b;
-  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --accent-color: #3b82f6; /* Modern Blue */
-  --accent-hover: #2563eb;
-  --accent-gradient: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-gradient: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  --text-primary: #000000;
+  --text-secondary: #334155;
+  --accent-color: #2563eb; /* Modern Blue */
+  --accent-hover: #1d4ed8;
+  --accent-gradient: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
   --danger: #ef4444;
   --success: #10b981;
 
-  /* Glassmorphism */
-  --glass-bg: rgba(30, 41, 59, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  --glass-blur: blur(12px);
+  /* Shadows for modern depth */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
   /* Spacing & Layout */
   --container-max-width: 1200px;
@@ -36,8 +35,7 @@
 
 body {
   font-family: var(--font-family);
-  background: var(--bg-gradient);
-  background-attachment: fixed;
+  background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
@@ -72,30 +70,36 @@ a:hover {
   padding: var(--spacing-xl) 0;
 }
 
-.glass-card {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
-  border-radius: 16px;
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: var(--shadow-sm);
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .btn-primary {
-  background: var(--accent-gradient);
+  background: var(--accent-color);
   color: #fff;
   border: none;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: inline-block;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  background: var(--accent-hover);
+  transform: translateY(-1px);
   color: #fff;
 }

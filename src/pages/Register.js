@@ -50,9 +50,9 @@ const Register = () => {
     };
 
     return (
-        <div className="register-page section-padding">
+        <div className="register-page section-padding bg-light">
             <div className="container">
-                <div className="register-wrapper glass-card">
+                <div className="register-wrapper card">
                     <div className="register-header text-center">
                         <h2>Student Registration</h2>
                         <p>Take the first step towards your IT career.</p>

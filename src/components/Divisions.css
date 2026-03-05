@@ -1,0 +1,225 @@
+.divisions-section {
+    background: #ffffff;
+}
+
+/* Header */
+.divisions-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.parent-brand-label {
+    display: inline-block;
+    background: #eff6ff;
+    color: var(--accent-color);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 99px;
+    border: 1px solid #bfdbfe;
+    margin-bottom: var(--spacing-md);
+}
+
+.divisions-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.brand-full-form {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.divisions-header p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* Grid */
+.divisions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Cards */
+.division-card {
+    border-radius: 16px;
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.division-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 16px 16px 0 0;
+}
+
+.division-sti::before {
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+
+.division-ss::before {
+    background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+}
+
+.division-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon */
+.division-icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.division-sti .division-icon-wrap {
+    background: #eff6ff;
+}
+
+.division-ss .division-icon-wrap {
+    background: #f5f3ff;
+}
+
+/* Tag badge */
+.division-tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 99px;
+    width: fit-content;
+}
+
+.division-sti .division-tag {
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+
+.division-ss .division-tag {
+    background: #f5f3ff;
+    color: #7c3aed;
+    border: 1px solid #ddd6fe;
+}
+
+/* Title */
+.division-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* Description */
+.division-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+    flex: 1;
+}
+
+/* Feature list */
+.division-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.division-features li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.division-features li::before {
+    content: '✓';
+    font-weight: 700;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+/* Buttons */
+.division-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-top: auto;
+}
+
+.division-btn-primary {
+    background: var(--accent-color);
+    color: #ffffff;
+    border: 2px solid var(--accent-color);
+}
+
+.division-btn-primary:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.division-btn-outline {
+    background: transparent;
+    color: #7c3aed;
+    border: 2px solid #7c3aed;
+}
+
+.division-btn-outline:hover {
+    background: #7c3aed;
+    color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .divisions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .divisions-header h2 {
+        font-size: 1.9rem;
+    }
+
+    .brand-full-form {
+        display: block;
+        margin-top: 4px;
+    }
+}

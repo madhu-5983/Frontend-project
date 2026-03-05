@@ -2,12 +2,12 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: #ffffff;
+    /* Plain white as requested */
+    border-bottom: 1px solid #e2e8f0;
     padding: var(--spacing-md) 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    /* Very subtle shadow so it doesn't look completely flat against the page body if scrolling */
 }
 
 .navbar-container {
@@ -26,10 +26,7 @@
 }
 
 .navbar-logo span {
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--accent-color);
 }
 
 .navbar-menu {
@@ -45,7 +42,7 @@
 }
 
 .nav-item:hover {
-    color: var(--text-primary);
+    color: var(--accent-color);
 }
 
 .nav-item.btn-primary {
